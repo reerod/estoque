@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  height: 100vh; /* ALTURA TOTAL DA TELA */
+  display: flex; /* Flexbox no body */
+  justify-content: center; /* Alinha no eixo horizontal */
+  align-items: center; /* Alinha no eixo vertical */
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: #66bbff;
+  font-size: 2rem;
+}
+
+.Botao1 {
+  text-decoration: none;
+  background-color: #66bbff;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.Botao1:hover {
+  background-color: #3399dd;
+}
