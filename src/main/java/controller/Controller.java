@@ -22,13 +22,20 @@ public class Controller extends HttpServlet {
 		String action = request.getServletPath();
 		System.out.println(action);
 		if (action.equals("/main")) {
-			materiais(request, response);
+			menu(request, response);
 		}
 	}
 
-	// Listar Materiais
-	protected void materiais(HttpServletRequest request, HttpServletResponse response)
+	// Menu
+	protected void menu(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.sendRedirect("estoque.jsp");
+		response.sendRedirect("menu-estoque.jsp");
 	}
+	
+	// Listar materiais
+	/*
+	 * protected void materiais(HttpServletRequest request, HttpServletResponse
+	 * response) throws ServletException, IOException {
+	 * response.sendRedirect("menu-estoque.jsp"); }
+	 */
 }
