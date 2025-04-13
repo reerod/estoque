@@ -27,7 +27,7 @@ public class DAO {
 		}
 	}
 
-	/* CRUD CREATE */
+	/* inserção de conteúdo no banco */
 	public void inserirMaterial(JavaBeans material) {
 		String create = "insert into materiais (nome, quantidade, peso) values " + "(?, ?, ?);";
 		try {
@@ -49,7 +49,7 @@ public class DAO {
 		}
 	}
 	
-	/* CRUD READ */
+	/* leitura dos conteúdo do banco */
 	public ArrayList<JavaBeans> listarMateriais() {
 		// Criando objeto para acessar a classe JavaBeans
 		ArrayList<JavaBeans> materiais = new ArrayList<>();

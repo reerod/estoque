@@ -12,12 +12,16 @@
 	<div class="container">
 		<h1>Adicionar novo material</h1>
 		<form name="frmMaterial" action="insert">
-			<input type="text" name="nome"
-				placeholder="Produto (Ex: Farinha de trigo)" class="Caixa1">
+			<div class="campo-form">
+				<input type="text" name="nome"
+					placeholder="Produto (Ex: Farinha de trigo)" class="Caixa1">
+			</div>
 			<div class="linha-menor">
 				<input type="text" name="quantidade" placeholder="Quantidade"
-					class="Caixa2"> <input type="text" name="peso"
-					placeholder="Peso" class="Caixa2">
+					class="Caixa2">
+			</div>
+			<div class="campo-form">
+				<input type="text" name="peso" placeholder="Peso" class="Caixa2">
 			</div>
 			<input type="button" value="Adicionar" class="Botao1"
 				onclick="validar()">

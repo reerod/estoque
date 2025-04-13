@@ -48,18 +48,14 @@ public class Controller extends HttpServlet {
 	  response) throws ServletException, IOException {
 		  // criando objeto que irá receber os dados do JavaBeans
 		  ArrayList<JavaBeans> lista = dao.listarMateriais();
-		  // teste de recebimento da lista
-		  for (int i = 0; i < lista.size(); i++) {
-			  System.out.println(lista.get(i).getIdcon());
-			  System.out.println(lista.get(i).getNome());
-			  System.out.println(lista.get(i).getQuantidade());
-			  System.out.println(lista.get(i).getPeso());
-		  }
 		  // Encaminhar a lista ao documento listar-material.jsp [parte 2 da aula]
+		  request.setAttribute("materiais", lista);
+		  RequestDispatcher rd = request.getRequestDispatcher("listar-material.jsp");
+		  rd.forward(request, response);
 	  }
 
 	
-	// Método para enviar material [botão Adicionar] cadastrado para o JavaBeans
+	// Método para enviar material cadastrado para o JavaBeans [botão Adicionar]
 	protected void novoMaterial(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// setar as variaveis JavaBeans
